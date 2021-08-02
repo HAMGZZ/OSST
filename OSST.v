@@ -1,4 +1,15 @@
--- This is the main file; call everything from here
+// OSST - Howin Tam & Lewis Hamilton Spring 2021 ASSE
+// This is the main "Top Level" file
 
-library ieee;
-use ieee.std_logic
+// Software modules:
+//      VGA OUT
+//      VGA BUFFER
+//      VGA CHARECTER BUFFER
+//      
+//      PS/2 Keyboard interface
+//      
+//      RS232 Interface
+//      
+//      
+//      
+//      
