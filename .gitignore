@@ -2,3 +2,5 @@
 *.qws
 .vscode
 output_files
+greybox_tmp
+.qsys_edit
