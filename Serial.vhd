@@ -10,6 +10,9 @@ entity serial_driver is
         -- Physical tx and rx pins
         i_rx_pin        : in std_logic;
         o_tx_pin        : out std_logic;
+		-- Tx and Rx flags
+        o_rx_busy       : out std_logic;
+        o_tx_busy       : out std_logic;
         -- RX Avalon Stream
         i_rx_avst_sop   : in std_logic;
         i_rx_avst_eop   : in std_logic;
@@ -26,6 +29,14 @@ entity serial_driver is
 end entity serial_driver;
 
 architecture serial_driver_arch of serial_driver is
-begin
+	type tx_machine is(idle, transmit);         -- TX State machine
+    type rx_machine is(idle, receive);          -- RX State machine
+    signal tx_state     : tx_machine;           -- TX State
+    signal rx_state     : rx_state;             -- RX State
+    signal parity_error : std_logic;
 
+begin
+    -- receive state machine
+    process(i_rst, i_clk)
+        variable rx_count   : integer range 0 to 
 end architecture serial_driver_arch;
